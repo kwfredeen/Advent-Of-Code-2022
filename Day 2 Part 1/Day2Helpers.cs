@@ -19,6 +19,11 @@ namespace Day_2_Part_1
         public const string youPaper = "Y";
         public const string youScissors = "Z";
 
+        //win draw or lose round
+        public const string win = "Z";
+        public const string draw = "Y";
+        public const string lose = "X";
+
         /// <summary>
         /// Calculates a score for one round of elvish Rock Paper Scissors based pn rules outlined at https://adventofcode.com/2022/day/2
         /// </summary>
@@ -72,5 +77,51 @@ namespace Day_2_Part_1
 
             return score;
         }
+
+        /// <summary>
+        /// Gets the shape you need to play to get the desired round outcome, given the shape the opponent should play
+        /// </summary>
+        /// <param name="opponentPlay">shape opponent will play according to the strategy guide</param>
+        /// <param name="desiredOutcome">whether you should win, lose, or draw the round, according to th strategy guide</param>
+        /// <returns>shape you should play to get the desired outcome</returns>
+        /// <exception cref="ArgumentException"> if opponent's play is not A,B,C or desired outcome is not X,Y, or Z</exception>
+        public static string outcomeToPlay(string opponentPlay, string desiredOutcome)
+        {
+            if (desiredOutcome == win)
+            {
+                return opponentPlay switch
+                {
+                    opponentRock => youPaper,
+                    opponentPaper => youScissors,
+                    opponentScissors => youRock,
+                    _ => throw new ArgumentException("opponent play must be A, B, or C")
+                };
+            }
+            else if (desiredOutcome == draw)
+            {
+                return opponentPlay switch
+                {
+                    opponentRock => youRock,
+                    opponentPaper => youPaper,
+                    opponentScissors => youScissors,
+                    _ => throw new ArgumentException("opponent play must be A, B, or C")
+                };
+            }
+            else if (desiredOutcome == lose)
+            {
+                return opponentPlay switch
+                {
+                    opponentRock => youScissors,
+                    opponentPaper => youRock,
+                    opponentScissors => youPaper,
+                    _ => throw new ArgumentException("opponent play must be A, B, or C")
+                };
+            }
+            else throw new ArgumentException("desired outcome must be X, Y, or Z");
+        }
     }
 }
+
+/* Improvements:
+ *  - using strings as function inputs isn't great. I've almost made a few mistakes passing in the wrong strings 
+ */
