@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day 2 Part 1", "Day 2 Part 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 2 Part 2", "Day 2 PArt 2\Day 2 Part 2.csproj", "{5C398523-9089-4578-8BE5-EF7947BB9D08}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day 1", "Day 1", "{E02E9DAC-6B05-4EE6-9834-818E3FC12B7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day 2", "Day 2", "{D5515886-A7B7-4B40-89A7-49C58F720431}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5EA68F1-3FC1-4CBB-8300-6B6483EE928A} = {E02E9DAC-6B05-4EE6-9834-818E3FC12B7B}
+		{17A7C50D-9601-4E49-8F42-DADA6855507D} = {E02E9DAC-6B05-4EE6-9834-818E3FC12B7B}
+		{AEF692C3-FEC0-4878-A52D-5872808D8930} = {D5515886-A7B7-4B40-89A7-49C58F720431}
+		{5C398523-9089-4578-8BE5-EF7947BB9D08} = {D5515886-A7B7-4B40-89A7-49C58F720431}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C3A914F-19D2-4E19-9C75-1C82487807C8}
