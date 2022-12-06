@@ -1,6 +1,6 @@
 ﻿namespace Day_3_Part_1
 {
-    internal class Day3Helpers
+    public class Day3Helpers
     {
         /// <summary>
         /// Splits a rucksack string into compartment strings
@@ -87,5 +87,37 @@
 
             return lowPriorityMap[item];
         }
+
+        public static char FindSharedItemInGroup(string[] rucksacks)
+        {
+            //track items common across all rucksacks
+            HashSet<char> typesInAll = new();
+
+            foreach (string rucksack in rucksacks)
+            {
+                HashSet<char> typesInThis = new(rucksack);
+
+                if (!typesInAll.Any())
+                {
+                    //populate with contents of first rucksack
+                    typesInAll = typesInThis;
+                } else
+                {
+                    //take only items that are common
+                    typesInAll.IntersectWith(typesInThis);
+                }
+            }
+
+            if(typesInAll.Count != 1)
+            {
+                throw new ArgumentException("rucksacks must share exactly one type across all rucksacks");
+            }
+
+            return typesInAll.ToArray()[0];
+        }
     }
 }
+
+/* Potential Improvements:
+ *  - Rewrite Day 3 Part 1 code to use FindSharedItemsInGroup
+ */
