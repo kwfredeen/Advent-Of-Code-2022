@@ -38,5 +38,16 @@ namespace Day_4_Part_1
 
             return oneInsideTwo || twoInsideOne;
         }
+
+        /// <summary>
+        /// Checks if swo section range arrays overlap in any way
+        /// </summary>
+        /// <param name="range1">first section range array</param>
+        /// <param name="range2">second section range array</param>
+        /// <returns>true if either range overlaps the other. false if there is no overlap</returns>
+        public static bool CheckAnySectionOverlap(int[] range1, int[] range2)
+        {
+            return (range1[0] >= range2[0] && range1[0] <= range2[1]) || (range2[0] >= range1[0] && range2[0] <= range1[1]);
+        }
     }
 }
