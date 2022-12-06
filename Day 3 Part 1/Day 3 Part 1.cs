@@ -1,13 +1,5 @@
 ﻿using Day_3_Part_1;
 
-string testString = "vJrwpWtwJgWrhcsFMMfFFhFp";
-Console.WriteLine(Day3Helpers.GetCompartments(testString));
-Console.WriteLine(Day3Helpers.FindSharedType(testString));
-Console.WriteLine(Day3Helpers.GetTypePriority('a'));
-Console.WriteLine(Day3Helpers.GetTypePriority('z'));
-Console.WriteLine(Day3Helpers.GetTypePriority('A'));
-Console.WriteLine(Day3Helpers.GetTypePriority('Z'));
-
 int duplicatePriorities = 0;
 
 while (true)
