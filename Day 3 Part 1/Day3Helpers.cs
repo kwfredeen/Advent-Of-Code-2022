@@ -88,6 +88,12 @@
             return lowPriorityMap[item];
         }
 
+        /// <summary>
+        /// Finds one shared item type within a group of rucksacks.
+        /// </summary>
+        /// <param name="rucksacks">array of rucksack strings, where exactly one item type is shared between them</param>
+        /// <returns>the item type shared between the rucksacks in the group</returns>
+        /// <exception cref="ArgumentException">when the number of shared item types is not exactly 1</exception>
         public static char FindSharedItemInGroup(string[] rucksacks)
         {
             //track items common across all rucksacks
