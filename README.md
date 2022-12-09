@@ -63,3 +63,6 @@ Same as part 1, but run Part 2.
 2. Copy input
 3. Paste into console
 4. Press enter and copy the result printed. You may continue pasting datastreams and each will be processed separately.
+
+### Part 2:
+Same as part 1, but run Part 2.
