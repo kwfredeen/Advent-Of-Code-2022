@@ -82,7 +82,7 @@ namespace Day_5_Part_1
         /// <summary>
         /// Executes a move command on stacks of crates.
         /// </summary>
-        /// <param name="stacks">stacks to move</param>
+        /// <param name="stacks">stacks to move within</param>
         /// <param name="move">move command</param>
         public static void ExecuteMove(List<Stack<char>> stacks, string move)
         {
@@ -157,6 +157,34 @@ namespace Day_5_Part_1
             }
 
             return allnumbers;
+        }
+
+        /// <summary>
+        /// Executes a CrateMover 9001 move, movimg multiple crates at once
+        /// </summary>
+        /// <param name="stacks">stacks to move within</param>
+        /// <param name="move">move command to execute</param>
+        public static void ExecuteMultiMove(List<Stack<char>> stacks, string move)
+        {
+            var command = ParseMoveCommand(move);
+
+            Stack<char> sourceStack = stacks[command.from - 1];
+            Stack<char> DestinationStack = stacks[command.to - 1];
+            //stores the multiple crates the 9001 crane can handle.
+            Stack<char> craneStack = new();
+
+            //move crates to crane stack
+            for (int i = 0; i < command.cratesToMove; i++)
+            {
+                craneStack.Push(sourceStack.Pop());
+            }
+
+            //move from crane stack to destination stack
+            //pushing onto an intermediate stack and popping onto a third retains original order.
+            foreach(char crate in craneStack)
+            {
+                DestinationStack.Push(crate);
+            }
         }
     }
 }
