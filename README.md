@@ -52,7 +52,14 @@ Same as part 1, but run Part 2.
 1. Run Part 1 in debug mode
 2. Copy input
 3. Paste input into console. you do not need to paste inital stacks and move commands separately.
-4. Press enter twice, once to submit the last movement, and once to get the top crate in each row.
+4. Press enter twice, once to submit the last movement, and once to get the top crate in each row. Not formatted as a row, so the output will need to be input manually.
 
-###Part 2:
+### Part 2:
 Same as part 1, but run Part 2.
+
+## Day 6
+### Part 2
+1. Run Part 1 in debug mode
+2. Copy input
+3. Paste into console
+4. Press enter and copy the result printed. You may continue pasting datastreams and each will be processed separately.
