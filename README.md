@@ -58,7 +58,7 @@ Same as part 1, but run Part 2.
 Same as part 1, but run Part 2.
 
 ## Day 6
-### Part 2
+### Part 1
 1. Run Part 1 in debug mode
 2. Copy input
 3. Paste into console
