@@ -53,3 +53,6 @@ Same as part 1, but run Part 2.
 2. Copy input
 3. Paste input into console. you do not need to paste inital stacks and move commands separately.
 4. Press enter twice, once to submit the last movement, and once to get the top crate in each row.
+
+###Part 2:
+Same as part 1, but run Part 2.
