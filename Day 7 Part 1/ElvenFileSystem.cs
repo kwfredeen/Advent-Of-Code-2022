@@ -121,5 +121,23 @@ namespace Day_7_Part_1
 
             return metThreshold;
         }
+
+        public List<ElvenFile> GetChildDirsWithMinSize(int minSize)
+        {
+            List<ElvenFile> metThreshold = new();
+
+            //get all children that are directories
+            List<ElvenFile> childDirs = children.Where(dir => dir.Type == FileType.Directory).ToList();
+
+            foreach (ElvenFile childDir in childDirs)
+            {
+                metThreshold.AddRange(childDir.GetChildDirsWithMinSize(minSize));
+            }
+
+            int thisSize = this.getTotalSize();
+            if (thisSize >= minSize) metThreshold.Add(this);
+
+            return metThreshold;
+        }
     }
 }
