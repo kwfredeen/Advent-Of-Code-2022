@@ -66,3 +66,14 @@ Same as part 1, but run Part 2.
 
 ### Part 2:
 Same as part 1, but run Part 2.
+
+## Day 7
+### Part 1
+1. Run Part 1 in debug mode
+2. Copy input
+3. Paste into console
+4. Press enter to process last line
+5. Type `compute` (case sensitive) and press enter to get result.
+
+### Part 2:
+Same as part 1, but run Part 2.
