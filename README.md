@@ -77,3 +77,10 @@ Same as part 1, but run Part 2.
 
 ### Part 2:
 Same as part 1, but run Part 2.
+
+## Day 8
+### Part 1:
+1. Run Part 1 in debug mode
+2. Copy input
+3. Paste into console
+4. Press enter twice, once to process last row, and once to count visible trees.
